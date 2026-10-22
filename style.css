@@ -1,0 +1,653 @@
+/*==========================
+      ESTILOS GENERALES
+==========================*/
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+scroll-behavior:smooth;
+}
+body{
+background:#EAFBFF;
+color:#333;
+overflow-x:hidden;
+}
+
+/*==========================
+        MENÚ
+==========================*/
+.menu{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+background:#FFB6C1;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 60px;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+z-index:1000;
+}
+.logo{
+font-size:30px;
+font-weight:bold;
+color:white;
+}
+.menu ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+.menu ul li a{
+text-decoration:none;
+color:white;
+font-size:20px;
+font-weight:600;
+transition:.3s;
+}
+.menu ul li a:hover{
+color:#FFF176;
+}
+
+/*==========================
+      HERO
+==========================*/
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:120px 60px 60px;
+background:linear-gradient(#B3E5FC,#EAFBFF);
+}
+.hero-texto{
+max-width:550px;
+}
+.hero-texto h1{
+font-size:65px;
+color:#FF5C8D;
+}
+.hero-texto h2{
+font-size:45px;
+margin:15px 0;
+color:#4CAF50;
+}
+.hero-texto p{
+font-size:22px;
+line-height:38px;
+margin-bottom:30px;
+}
+#comenzar{
+padding:18px 45px;
+border:none;
+background:#FF5C8D;
+color:white;
+font-size:22px;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+}
+#comenzar:hover{
+background:#E91E63;
+transform:scale(1.05);
+}
+.hero-imagen img{
+width:420px;
+animation:flotar 3s infinite;
+}
+@keyframes flotar{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/*==========================
+      APRENDER
+==========================*/
+.aprende{
+padding:90px 60px;
+text-align:center;
+}
+.aprende h2{
+font-size:50px;
+color:#4CAF50;
+margin-bottom:20px;
+}
+.aprende p{
+font-size:22px;
+margin-bottom:40px;
+}
+.contenedor-card{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+.card{
+background:white;
+border-radius:25px;
+padding:35px;
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-10px);
+}
+.emoji{
+font-size:65px;
+margin-bottom:20px;
+}
+.card h3{
+font-size:30px;
+color:#FF5C8D;
+margin-bottom:15px;
+}
+.card p{
+font-size:18px;
+line-height:30px;
+margin-bottom:20px;
+}
+.card button{
+padding:12px 30px;
+background:#4CAF50;
+border:none;
+border-radius:30px;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+.card button:hover{
+background:#2E7D32;
+}
+
+/*==========================
+        JUEGOS
+==========================*/
+.juegos{
+padding:90px 60px;
+background:#FDF6EC;
+text-align:center;
+}
+.juegos h2{
+font-size:50px;
+color:#FF5C8D;
+margin-bottom:15px;
+}
+.juegos p{
+font-size:22px;
+margin-bottom:40px;
+color:#555;
+}
+.contenedor-juegos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+.juego{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.4s;
+}
+.juego:hover{
+transform:translateY(-12px);
+}
+.juego .icono{
+font-size:70px;
+margin-bottom:20px;
+}
+.juego h3{
+font-size:28px;
+color:#4CAF50;
+margin-bottom:15px;
+}
+.juego p{
+font-size:18px;
+line-height:28px;
+margin-bottom:25px;
+}
+.juego button{
+background:#FF5C8D;
+color:white;
+border:none;
+padding:14px 35px;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+.juego button:hover{
+background:#E91E63;
+transform:scale(1.05);
+}
+
+/*==========================
+      PUNTAJE
+==========================*/
+.puntaje{
+padding:90px 60px;
+background:#E8F5E9;
+text-align:center;
+}
+.puntaje h2{
+font-size:48px;
+color:#2E7D32;
+margin-bottom:40px;
+}
+.panel{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+.dato{
+background:white;
+padding:30px;
+width:220px;
+border-radius:20px;
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+.dato h3{
+font-size:24px;
+color:#FF5C8D;
+margin-bottom:15px;
+}
+.dato span{
+font-size:28px;
+font-weight:bold;
+color:#4CAF50;
+}
+
+/*==========================
+       ACERCA
+==========================*/
+.acerca{
+padding:90px 60px;
+text-align:center;
+background:#FFF8E1;
+}
+.acerca h2{
+font-size:46px;
+color:#FF5C8D;
+margin-bottom:20px;
+}
+.acerca p{
+max-width:900px;
+margin:auto;
+font-size:22px;
+line-height:38px;
+color:#555;
+}
+
+/*==========================
+        FOOTER
+==========================*/
+footer{
+background:#FFB6C1;
+padding:35px;
+text-align:center;
+color:white;
+}
+.footer h3{
+font-size:30px;
+margin-bottom:15px;
+}
+.footer p{
+font-size:18px;
+line-height:30px;
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+@media(max-width:768px){
+.menu{flex-direction:column;height:auto;padding:20px;}
+.menu ul{flex-wrap:wrap;justify-content:center;margin-top:15px;gap:20px;}
+.hero{flex-direction:column;text-align:center;padding:130px 30px 60px;}
+.hero-texto h1{font-size:45px;}
+.hero-texto h2{font-size:34px;}
+.hero-texto p{font-size:18px;}
+.hero-imagen img{width:280px;margin-top:30px;}
+.aprende,.juegos,.puntaje,.acerca{padding:60px 25px;}
+.panel{flex-direction:column;align-items:center;}
+.dato{width:90%;}
+.footer h3{font-size:24px;}
+.footer p{font-size:16px;}
+}
+
+/*=========== JUEGO ===========*/
+.pantallaJuego{
+background:#fff;
+padding:40px;
+margin:40px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+text-align:center;
+}
+.infoJuego{
+display:flex;
+justify-content:space-around;
+margin:20px 0;
+font-size:22px;
+font-weight:bold;
+}
+.barra{
+width:100%;
+height:20px;
+background:#795252;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:30px;
+}
+#progreso{
+width:0%;
+height:100%;
+background:#4CAF50;
+transition:.5s;
+}
+.respuestas{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:30px;
+}
+.respuestas button{
+padding:18px;
+font-size:20px;
+border:none;
+border-radius:15px;
+background:#bb4555;
+cursor:pointer;
+transition:.3s;
+}
+/* MODIFICADO: Color hover más amigable para evitar confusión con respuesta incorrecta */
+.respuestas button:hover{
+background:#86c0e3;
+color:#fff;
+}
+#mensajePanchita{
+margin-top:30px;
+font-size:24px;
+font-weight:bold;
+color:#4d9f3a;
+}
+
+/* =================================
+   🐼 INFORMACIÓN INTERACTIVA
+================================= */
+.info-panchita {
+    display: none;
+    width: 92%;
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff, #f3fbff);
+    border-radius: 35px;
+    border: 5px solid #FFB6C1;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15), 0 0 0 8px rgba(255,182,193,.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: aparecerInfo .6s ease;
+}
+.info-panchita::before {
+    content: "⭐";
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 35px;
+    animation: girarEstrella 3s infinite;
+}
+.info-panchita::after {
+    content: "✨";
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 35px;
+    animation: flotarDecoracion 2s infinite;
+}
+@keyframes aparecerInfo {
+    from { opacity: 0; transform: translateY(50px) scale(.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes girarEstrella {
+    0%,100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(20deg) scale(1.2); }
+}
+@keyframes flotarDecoracion {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ================================
+   PANCHITA
+================================ */
+.panchita-grande {
+    font-size: 100px;
+    display: inline-block;
+    filter: drop-shadow(0 8px 5px rgba(0,0,0,.15));
+    animation: saltarPanchita 1.5s infinite;
+}
+@keyframes saltarPanchita {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-5deg); }
+}
+
+/* ================================
+   TÍTULO
+================================ */
+.info-panchita h2 {
+    font-size: 28px;
+    color: #FF5C8D;
+    margin: 8px 0 14px;
+    text-shadow: 2px 2px 0 #FFDDE6;
+}
+
+/* ================================
+   EXPLICACIÓN
+================================ */
+.explicacion {
+    background: #E8F8FF;
+    padding: 14px;
+    border-radius: 17px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* ================================
+   EJEMPLOS
+================================ */
+.ejemplo-info {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#FFF8E1,#FFFDF5);
+    border: 3px dashed #FFD54F;
+}
+.ejemplo-info h3 {
+    color: #F57C00;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+/* ================================
+   PAREJAS
+================================ */
+.pareja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+.pareja span {
+    padding: 14px 20px;
+    background: white;
+    border-radius: 18px;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 5px 12px rgba(0,0,0,.12);
+    transition: .3s;
+}
+.pareja span:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ================================
+   RETO
+================================ */
+.reto-info {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#E8F5E9,#F1FFF3);
+    border: 3px solid #81C784;
+}
+.reto-info h3 {
+    color: #2E7D32;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.reto-info p {
+    font-size: 17px;
+}
+
+/* ================================
+   BOTONES DEL RETO
+================================ */
+.reto-info button {
+    border: none;
+    padding: 11px 16px;
+    margin: 6px;
+    border-radius: 18px;
+    background: white;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0,0,0,.12);
+    transition: .25s;
+}
+.reto-info button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+/* ================================
+   RESULTADO
+================================ */
+.resultado-info {
+    font-size: 21px;
+    font-weight: bold;
+    min-height: 30px;
+    margin-top: 15px;
+}
+
+/* ================================
+   BOTÓN VOLVER
+================================ */
+.btn-volver {
+    width: auto !important;
+    height: auto !important;
+    display: inline-block !important;
+    margin: 25px auto 5px !important;
+    padding: 12px 25px !important;
+    border: none !important;
+    border-radius: 30px !important;
+    background: #d15bc3 !important;
+    color: white !important;
+    font-family: 'Fredoka', sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(184, 94, 138, 0.653);
+    transition: .3s;
+}
+.btn-volver:hover {
+    background: #a21f76 !important;
+    transform: translateY(-3px) scale(1.05);
+}
+/* TEMPORIZADOR DE PANCHITA */
+.temporizador {
+    font-size: 25px;
+    font-weight: bold;
+    color: #E91E63;
+    background: #FFE4EC;
+    border-radius: 20px;
+    padding: 12px;
+    margin: 20px auto;
+    max-width: 280px;
+    text-align: center;
+}
+
+#tiempo {
+    color: #2E7D32;
+}
+
+#tiempo.poco-tiempo {
+    color: #E53935;
+}
+
+/* AJUSTE DE TAMAÑO DE LOS CUADROS PANCHITA */
+.info-panchita {
+    width: 90%;
+    max-width: 650px;
+    box-sizing: border-box;
+    margin: 15px auto;
+    padding: 18px;
+}
+
+/* Contenido más compacto */
+.info-panchita .panchita-grande {
+    font-size: 48px;
+}
+
+.info-panchita h2 {
+    font-size: 25px;
+    margin: 6px 0 12px;
+}
+
+.info-panchita .explicacion {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.info-panchita .ejemplo-info {
+    margin-top: 14px;
+    padding: 14px;
+}
+
+.info-panchita .reto-info {
+    margin-top: 14px;
+    padding: 14px;
+}
+
+.info-panchita .reto-info button {
+    padding: 9px 13px;
+    font-size: 15px;
+    margin: 5px;
+}
+
+/* En celulares */
+@media (max-width: 600px) {
+    .info-panchita {
+        width: 94%;
+        padding: 12px;
+        margin: 10px auto;
+    }
+
+    .info-panchita h2 {
+        font-size: 22px;
+    }
+
+    .info-panchita .explicacion,
+    .info-panchita .reto-info p {
+        font-size: 15px;
+    }
+}

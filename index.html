@@ -1,221 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jugando con Panchita: sitio web educativo dinámico para aprender sinónimos, antónimos y oraciones simples." />
-  <title>Jugando con Panchita | Sinónimos y Antónimos</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jugando con Panchita</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-  <div class="background-decor" aria-hidden="true">
-    <span class="leaf leaf-1">❀</span>
-    <span class="leaf leaf-2">✦</span>
-    <span class="leaf leaf-3">☘</span>
-    <span class="leaf leaf-4">✧</span>
-  </div>
 
-  <header class="site-header" id="inicio">
-    <div class="brand-card">
-      <img src="logo_colegio.jpg" alt="Logo de la Unidad Educativa Maestro Pitágoras II" class="school-logo" />
-      <div>
-        <p class="school-label">Unidad Educativa Técnico Humanístico Maestro Pitágoras II</p>
-        <h1>Jugando con Panchita</h1>
-        <p class="subtitle">Aprende sinónimos, antónimos y oraciones simples jugando.</p>
-      </div>
+<!-- ================= NAVBAR ================= -->
+<nav class="menu">
+    <div class="logo">🐼 <span>Panchita</span></div>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#aprender">Aprender</a></li>
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+    </ul>
+</nav>
+
+<!-- ================= INICIO ================= -->
+<section class="hero" id="inicio">
+    <div class="hero-texto">
+        <h1>¡Hola!</h1>
+        <h2>Soy Panchita 🐼</h2>
+        <p>Bienvenido a <strong>Jugando con Panchita</strong>,un espacio educativo donde aprenderás sinónimos, antónimos y oraciones simples mediante actividades divertidas.</p>
+        <button id="comenzar" onclick="document.getElementById('aprender').scrollIntoView({behavior:'smooth'})">Comenzar</button>
     </div>
-    <img src="panchita_icon.png" alt="Icono del juego Jugando con Panchita" class="game-icon" />
-  </header>
+    <div class="hero-imagen">
+        <!-- MODIFICADO: Imagen en la misma carpeta -->
+        <img src="img/panchita.png" alt="Panchita">
+    </div>
+</section>
 
-  <nav class="nav-panel" aria-label="Navegación principal">
-    <a href="#aprender">Aprender</a>
-    <a href="#juegos">Juegos</a>
-    <a href="#ruleta">Ruleta</a>
-    <a href="#autores">Autores</a>
-  </nav>
-
-  <main>
-    <section class="hero section-card">
-      <div class="hero-copy">
-        <span class="pill">Proyecto de innovación escolar · HTML5 + CSS3 + JavaScript</span>
-        <h2>Una página dinámica para reforzar lenguaje de forma divertida</h2>
-        <p>
-          Esta web convierte el aprendizaje en un juego visual, rápido y sencillo para niños. Incluye explicación,
-          actividades con niveles, temporizador, puntaje, ruleta de palabras y sección de autores.
-        </p>
-        <div class="hero-actions">
-          <a class="primary-button" href="#juegos">Comenzar a jugar</a>
-          <a class="secondary-button" href="#aprender">Ver explicación</a>
+<!-- ================= APRENDER ================= -->
+<section id="aprender" class="aprende">
+    <h2>📚 Aprende con Panchita</h2>
+    <p>Antes de jugar, descubre qué son los sinónimos, los antónimos y las oraciones simples.</p>
+    <div class="contenedor-card">
+        <!-- SINÓNIMOS -->
+        <div class="card">
+            <div class="emoji">📖</div>
+            <h3>Sinónimos</h3>
+            <p>Son palabras que tienen un significado igual o muy parecido.</p>
+            <button onclick="mostrarInfo('infoSinonimos')">Leer más</button>
         </div>
-      </div>
-      <div class="phone-preview" aria-label="Vista previa del estilo del juego">
-        <img src="panda_inicio.jpg" alt="Diseño de referencia de Jugando con Panchita" />
-      </div>
-    </section>
-
-    <section class="analysis section-card" id="analisis">
-      <div class="section-title">
-        <span>01</span>
-        <h2>Análisis reducido del proyecto</h2>
-      </div>
-      <div class="analysis-grid">
-        <article>
-          <h3>Necesidad</h3>
-          <p>Niños en edad escolar presentan dificultades para reconocer palabras similares, opuestas y formar oraciones simples.</p>
-        </article>
-        <article>
-          <h3>Solución</h3>
-          <p>Crear una página web lúdica, visual y accesible que permita aprender mediante práctica interactiva.</p>
-        </article>
-        <article>
-          <h3>Usuarios</h3>
-          <p>Estudiantes de primaria, padres de familia y docentes que deseen reforzar lenguaje en casa o en aula.</p>
-        </article>
-        <article>
-          <h3>Resultado esperado</h3>
-          <p>Mejorar vocabulario, comprensión lectora, rapidez de respuesta y construcción de oraciones simples.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="learn section-card" id="aprender">
-      <div class="section-title">
-        <span>02</span>
-        <h2>Aprendamos con Panchita</h2>
-      </div>
-      <div class="learn-layout">
-        <div class="concept-card green-card">
-          <div class="concept-icon">📗</div>
-          <h3>Sinónimos</h3>
-          <p>Son palabras que tienen un significado igual o muy parecido.</p>
-          <strong>Ejemplo:</strong> mamá = madre · bonito = hermoso
+        <!-- ANTÓNIMOS -->
+        <div class="card">
+            <div class="emoji">🔄</div>
+            <h3>Antónimos</h3>
+            <p>Son palabras que tienen significados contrarios.</p>
+            <button onclick="mostrarInfo('infoAntonimos')">Leer más</button>
         </div>
-        <div class="concept-card orange-card">
-          <div class="concept-icon">🔤</div>
-          <h3>Antónimos</h3>
-          <p>Son palabras que tienen significados opuestos.</p>
-          <strong>Ejemplo:</strong> rápido ≠ lento · grande ≠ pequeño
+        <!-- ORACIONES -->
+        <div class="card">
+            <div class="emoji">✍️</div>
+            <h3>Oraciones Simples</h3>
+            <p>Son oraciones que tienen un solo verbo.</p>
+            <button onclick="mostrarInfo('infoOraciones')">Leer más</button>
         </div>
-        <div class="concept-card blue-card">
-          <div class="concept-icon">✏️</div>
-          <h3>Oraciones simples</h3>
-          <p>Expresan una idea clara con sujeto, verbo y complemento.</p>
-          <strong>Ejemplo:</strong> La niña lee un cuento.
+    </div>
+
+    <!-- INFO SINÓNIMOS -->
+    <div id="infoSinonimos" class="info-panchita">
+        <div class="panchita-grande">🐼</div>
+        <h2>📚 ¡Aprendamos sobre los sinónimos!</h2>
+        <p class="explicacion">Los <strong>sinónimos</strong> son palabras que tienen un significado igual o parecido.</p>
+        <div class="ejemplo-info">
+            <h3>💡 Mira estos ejemplos</h3>
+            <div class="pareja"><span>😊 FELIZ</span><span>➡️</span><span>😄 ALEGRE</span></div>
+            <div class="pareja"><span>🏠 GRANDE</span><span>➡️</span><span>🏰 ENORME</span></div>
+            <div class="pareja"><span>🏃 RÁPIDO</span><span>➡️</span><span>⚡ VELOZ</span></div>
         </div>
-      </div>
-      <figure class="wide-image">
-        <img src="panda_info.jpg" alt="Explicación visual de sinónimos y antónimos" />
-        <figcaption>Material visual adaptado al estilo infantil del proyecto.</figcaption>
-      </figure>
-    </section>
-
-    <section class="games section-card" id="juegos">
-      <div class="section-title">
-        <span>03</span>
-        <h2>Juegos interactivos</h2>
-      </div>
-
-      <div class="mode-selector" role="group" aria-label="Elegir tipo de juego">
-        <button class="mode-button active" data-mode="sinonimos">Sinónimos</button>
-        <button class="mode-button" data-mode="antonimos">Antónimos</button>
-        <button class="mode-button" data-mode="oraciones">Oraciones simples</button>
-      </div>
-
-      <div class="game-board">
-        <div class="score-card">
-          <div>
-            <span>Puntaje</span>
-            <strong id="score">0</strong>
-          </div>
-          <div>
-            <span>Nivel</span>
-            <strong id="level">1</strong>
-          </div>
-          <div>
-            <span>Tiempo</span>
-            <strong id="timer">45</strong>
-          </div>
-          <div>
-            <span>Mejor</span>
-            <strong id="bestScore">0</strong>
-          </div>
+        <div class="reto-info">
+            <h3>🎯 ¡Reto de Panchita!</h3>
+            <p>¿Cuál es un sinónimo de <strong>BONITO</strong>?</p>
+            <button onclick="respuestaInfo(this, true)">🌸 Hermoso</button>
+            <button onclick="respuestaInfo(this, false)">😡 Enojado</button>
+            <p class="resultado-info"></p>
         </div>
+        <button class="btn-volver" onclick="cerrarInfo('infoSinonimos')">🔙 Volver</button>
+    </div>
 
-        <div class="progress-wrap" aria-label="Progreso del juego">
-          <div id="progressBar" class="progress-bar"></div>
+    <!-- INFO ANTÓNIMOS -->
+    <div id="infoAntonimos" class="info-panchita">
+        <div class="panchita-grande">🐼</div>
+        <h2>🔄 ¡Aprendamos sobre los antónimos!</h2>
+        <p class="explicacion">Los <strong>antónimos</strong> son palabras que tienen significados opuestos.</p>
+        <div class="ejemplo-info">
+            <h3>💡 Mira estos ejemplos</h3>
+            <div class="pareja"><span>☀️ CALIENTE</span><span>↔️</span><span>❄️ FRÍO</span></div>
+            <div class="pareja"><span>😊 FELIZ</span><span>↔️</span><span>😢 TRISTE</span></div>
+            <div class="pareja"><span>🐘 GRANDE</span><span>↔️</span><span>🐭 PEQUEÑO</span></div>
         </div>
-
-        <div class="question-card">
-          <img src="panchita_icon.png" alt="Panchita animando el juego" class="helper-panda" />
-          <p id="gameInstruction" class="instruction">Elige el sinónimo correcto.</p>
-          <h3 id="questionText">Presiona iniciar</h3>
-          <div id="options" class="options-grid"></div>
-          <p id="feedback" class="feedback" aria-live="polite"></p>
-          <div class="game-actions">
-            <button id="startGame" class="primary-button button-reset">Iniciar juego</button>
-            <button id="nextQuestion" class="secondary-button button-reset" disabled>Siguiente</button>
-          </div>
+        <div class="reto-info">
+            <h3>🎯 ¡Reto de Panchita!</h3>
+            <p>¿Cuál es el antónimo de <strong>RÁPIDO</strong>?</p>
+            <button onclick="respuestaInfo(this, false)">⚡ Veloz</button>
+            <button onclick="respuestaInfo(this, true)">🐢 Lento</button>
+            <p class="resultado-info"></p>
         </div>
-      </div>
-    </section>
+        <button class="btn-volver" onclick="cerrarInfo('infoAntonimos')">🔙 Volver</button>
+    </div>
 
-    <section class="roulette section-card" id="ruleta">
-      <div class="section-title">
-        <span>04</span>
-        <h2>Ruleta de palabras</h2>
-      </div>
-      <div class="roulette-layout">
-        <div class="wheel-area">
-          <div class="pointer" aria-hidden="true"></div>
-          <div id="wheel" class="wheel" aria-label="Ruleta de palabras">
-            <span class="wheel-label label-1">mamá</span>
-            <span class="wheel-label label-2">rápido</span>
-            <span class="wheel-label label-3">grande</span>
-            <span class="wheel-label label-4">feliz</span>
-            <span class="wheel-label label-5">frío</span>
-            <span class="wheel-label label-6">nuevo</span>
-            <span class="wheel-label label-7">alto</span>
-            <span class="wheel-label label-8">limpio</span>
-          </div>
-          <button id="spinButton" class="spin-button">GIRAR</button>
+    <!-- INFO ORACIONES -->
+    <div id="infoOraciones" class="info-panchita">
+        <div class="panchita-grande">🐼</div>
+        <h2>📝 ¡Aprendamos a formar oraciones!</h2>
+        <p class="explicacion">Una oración expresa una idea completa. Generalmente podemos encontrar un <strong>sujeto</strong> y un <strong>verbo</strong>.</p>
+        <div class="ejemplo-info">
+            <h3>💡 Ejemplo</h3>
+            <div class="oracion-ejemplo">🐼 <strong>Panchita juega.</strong></div>
+            <div class="partes-oracion">
+                <span>🐼 Panchita = SUJETO</span>
+                <span>⚽ juega = VERBO</span>
+            </div>
         </div>
-        <div class="roulette-panel">
-          <img src="panda_ruleta_referencia.jpg" alt="Diseño de referencia de ruleta de palabras" />
-          <div class="result-box">
-            <span>Palabra obtenida</span>
-            <strong id="spinResult">---</strong>
-            <p id="spinChallenge">Presiona girar y Panchita te dará un reto.</p>
-          </div>
+        <div class="reto-info">
+            <h3>🎯 ¡Reto de Panchita!</h3>
+            <p>¿Cuál oración está correctamente escrita?</p>
+            <button onclick="respuestaInfo(this, false)"> Juega Panchita parque.</button>
+            <button onclick="respuestaInfo(this, true)"> Panchita juega.</button>
+            <p class="resultado-info"></p>
         </div>
-      </div>
-    </section>
+        <button class="btn-volver" onclick="cerrarInfo('infoOraciones')">🔙 Volver</button>
+    </div>
+</section>
 
-    <section class="authors section-card" id="autores">
-      <div class="section-title">
-        <span>05</span>
-        <h2>Autores del proyecto</h2>
-      </div>
-      <div class="authors-card">
-        <img src="autoras.jpg" alt="Fotografía de las autoras del proyecto" class="authors-photo" />
-        <div class="authors-info">
-          <h3>Postulantes</h3>
-          <p>Andia Ortiz Débora Paulina</p>
-          <p>Gonzales Quevedo Lizeth</p>
-          <h3>Docente</h3>
-          <p>Elias Puma Grimaldes</p>
-          <h3>Institución</h3>
-          <p>Unidad Educativa Técnico Humanístico Maestro Pitágoras II · La Guardia, Santa Cruz, Bolivia · 2026</p>
+<!-- ================= JUEGOS ================= -->
+<section id="juegos" class="juegos">
+    <h2>🎮 Juegos Educativos</h2>
+    <p>Selecciona una actividad para aprender jugando.</p>
+    <div class="contenedor-juegos">
+        <div class="juego">
+            <div class="icono">📚</div>
+            <h3>Juego de Sinónimos</h3>
+            <p>Encuentra la palabra que tiene el mismo significado.</p>
+            <button onclick="abrirJuego('sinonimos')">Jugar Sinónimos</button>
         </div>
-      </div>
-    </section>
-  </main>
+        <div class="juego">
+            <div class="icono">🔄</div>
+            <h3>Juego de Antónimos</h3>
+            <p>Selecciona la palabra con significado contrario.</p>
+            <button onclick="abrirJuego('antonimos')">Jugar Antónimos</button>
+        </div>
+        <div class="juego">
+            <div class="icono">✍️</div>
+            <h3>Oraciones Simples</h3>
+            <p>Aprende a reconocer oraciones simples correctamente.</p>
+            <button onclick="abrirJuego('oraciones')">Jugar Oraciones</button>
+        </div>
+    </div>
+</section>
 
-  <footer class="footer">
-    <img src="panchita_icon.png" alt="Miniatura de Panchita" />
-    <p>Jugando con Panchita · Página educativa creada en HTML5, CSS3 y JavaScript.</p>
-  </footer>
+<!-- ================= PUNTAJE ================= -->
+<!-- MODIFICADO: Agregados los IDs correctos para actualizar interfaz -->
+<section class="puntaje">
+    <h2>⭐ Tu progreso</h2>
+    <div class="panel">
+        <div class="dato">
+            <h3>Puntos</h3>
+            <span id="progresoPuntos">0</span>
+        </div>
+        <div class="dato">
+            <h3>Estrellas</h3>
+            <span id="progresoEstrellas">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="dato">
+            <h3>Nivel</h3>
+            <span id="progresoNivel">Nivel 1</span>
+        </div>
+    </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ================= ACERCA ================= -->
+<section id="acerca" class="acerca">
+    <h2>🐼 Acerca de Panchita</h2>
+    <p>Panchita es un panda que acompaña a los niños en el aprendizaje de sinónimos, antónimos y oraciones simples mediante actividades educativas, divertidas e interactivas.</p>
+</section>
+
+<!-- ================= VENTANA DEL JUEGO ================= -->
+<section id="pantallaJuego" class="pantallaJuego" style="display:none;">
+    <h2 id="tituloJuego">📚 Juego de Sinónimos</h2>
+    <div class="infoJuego">
+        <p>🌱 Nivel: <span id="nivelActual">1</span></p>
+        <p>⭐ Puntos: <span id="puntajeJuego">0</span></p>
+        <p>❤️ Vidas: <span id="vidas">3</span></p>
+    </div>
+    <div class="barra">
+        <div id="progreso"></div>
+    </div>
+    <div class="temporizador">
+    ⏱️ Tiempo: <span id="tiempo">30</span> segundos
+</div>
+    <div class="pregunta">
+        <h3 id="pregunta">¿Cuál es el sinónimo de FELIZ?</h3>
+    </div>
+    <div class="respuestas">
+        <button onclick="responder(0)" id="r0">Contento</button>
+        <button onclick="responder(1)" id="r1">Triste</button>
+        <button onclick="responder(2)" id="r2">Grande</button>
+        <button onclick="responder(3)" id="r3">Pequeño</button>
+    </div>
+    <p id="mensajePanchita">🐼 ¡Escoge la respuesta correcta!</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer">
+        <h3>🐼 Jugando con Panchita</h3>
+        <p>"Aprender jugando hace que cada palabra sea una nueva aventura."</p>
+        <p>© 2026 Todos los derechos reservados.</p>
+        <p> Creado por Gonzales y Andia.</p>
+
+    </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="script.js"></script>
+
 </body>
 </html>
